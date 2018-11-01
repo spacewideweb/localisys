@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fd_back">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Add your info"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="5dp"
+        android:background="#aeaeae"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="To create a post you need to fill out your contact info and add payment method if you didn't yet. We need this info to make sure that you are real person and make sure that you are able to pay."/>
+
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Contact info"
+        android:textColor="@color/yellow_c"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/edit_style_switch_yellow"/>
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Payment"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_style_yellow"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_color_blue"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:layout_toLeftOf="@+id/ve1"
+            android:id="@+id/tv_addcancel"
+            android:text="Cancel"/>
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/ve1"
+            android:background="@color/text_color_blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ve1"
+            android:id="@+id/tv_addsubmit"
+            android:gravity="center"
+            android:text="Submit"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

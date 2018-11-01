@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#FBB045"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@+id/edit_switch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/re"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:gravity="start|center"
+        android:background="@drawable/edit_style_switch_white">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/evtabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabMode="fixed"
+            app:tabBackground="@drawable/tabselector_white"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabSelectedTextColor="#FBB045"
+            app:tabTextColor="@color/white">
+
+        </android.support.design.widget.TabLayout>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Select by what date you need to have it done"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:orientation="vertical"
+        android:layout_marginRight="35dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/re1l1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lin1"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="START"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:id="@+id/tvTo"
+                        android:layout_toLeftOf="@+id/v1"
+                        android:background="@drawable/button_white"/>
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:id="@+id/v1"
+                        android:layout_centerVertical="true"
+                        android:background="#fff"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="END"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/v1"
+                        android:id="@+id/tvFrom"
+                        android:background="@drawable/button_white"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lin2"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Date"
+                    android:padding="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:id="@+id/tvDatee"
+                    android:layout_toLeftOf="@+id/v1"
+                    android:background="@drawable/button_white"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/re1l1"
+            android:layout_alignParentBottom="true">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#fff"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@+id/vc1"
+                android:gravity="center"
+                android:id="@+id/tvCancel"
+                android:layout_centerVertical="true"
+                android:text="Cancel"/>
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:id="@+id/vc1"
+                android:background="#fff"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/tvSet"
+                android:layout_toRightOf="@+id/vc1"
+                android:layout_centerVertical="true"
+                android:text="Set"/>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

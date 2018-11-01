@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="right">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/mg"
+        android:id="@+id/lin_hint"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/text_color_blue"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Make your post private, that only tagged\npeople could see it. You can change the\nvisibility after publication of post."/>
+
+    </LinearLayout>
+</LinearLayout>

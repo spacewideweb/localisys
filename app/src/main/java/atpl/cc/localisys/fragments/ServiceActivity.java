@@ -963,7 +963,7 @@ public class ServiceActivity extends Fragment implements View.OnClickListener, G
     public void upload() {
         pd.show();
 
-        StorageReference childRef = mStorageRef.child("PostImages/service" + System.currentTimeMillis());
+        final StorageReference childRef = mStorageRef.child("PostImages/service" + System.currentTimeMillis());
 
 
         //uploading the image
@@ -974,7 +974,7 @@ public class ServiceActivity extends Fragment implements View.OnClickListener, G
             e.printStackTrace();
         }
 
-        UploadTask uploadTask = childRef.putStream(stream);
+        final UploadTask uploadTask = childRef.putStream(stream);
 
 
         uploadTask.addOnFailureListener(new OnFailureListener() {
@@ -988,12 +988,17 @@ public class ServiceActivity extends Fragment implements View.OnClickListener, G
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 pd.dismiss();
-                Uri downloadUrl = taskSnapshot.getDownloadUrl();
-                image = downloadUrl.toString();
-                db_images.add(image);
-                Log.d("downloadUrl", image);
-                Toast.makeText(getActivity(), "Image Uploaded successfully", Toast.LENGTH_SHORT).show();
-                Log.d("success", "ff");
+                childRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        image = uri.toString();
+                        db_images.add(image);
+                        Log.d("downloadUrl", image);
+                        Toast.makeText(getActivity(), "Image Uploaded successfully", Toast.LENGTH_SHORT).show();
+                        Log.d("success", "ff");
+                    }
+                });
+
             }
         });
     }

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#FBB045"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:layout_gravity="center"
+            android:text="Looking for event"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:fontFamily="sans-serif"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center|right"
+            android:paddingBottom="4dp"
+            android:text="Cancel"
+            android:layout_gravity="center|right"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:id="@+id/linear_top"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_gravity="center"
+                        android:background="#E3A03B"/>
+
+                    <LinearLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/top_light_yellow"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="0.3">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ev_image_ID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:src="@drawable/event_white" />
+
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="8dp"
+                                android:id="@+id/ivMultiple"
+                                android:visibility="gone"
+                                android:src="@drawable/yellw_hint"/>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rel_title"
+                            android:layout_weight="0.7"
+                            android:layout_marginRight="16dp"
+                            android:orientation="vertical"
+                            android:paddingTop="15dp">
+
+                            <EditText
+                                android:id="@+id/ev_title"
+                                android:layout_width="match_parent"
+                                android:fontFamily="sans-serif"
+                                android:layout_height="30dp"
+                                android:hint="Title"
+                                android:textCursorDrawable="@drawable/black_cursor_theme"
+                                android:paddingLeft="15dp"
+                                android:inputType="text"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:gravity="start|center"
+                                android:textColorHint="#b2b2b2"
+                                android:background="@drawable/edit_style_white"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/text_secure"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:layout_below="@+id/edit_title"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/black"
+                                        android:text="Secure post"/>
+                                    <TextView
+                                        android:id="@+id/text_profile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:layout_below="@+id/text_secure"
+                                        android:textSize="12sp"
+                                        android:textColor="#474748"
+                                        android:text="Your profile is visible."/>
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2"
+                                    android:gravity="center|right">
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:id="@+id/lock"
+                                        android:src="@drawable/event_lock"/>
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <atpl.cc.localisys.activities.classes.MultiLineText
+                        android:id="@+id/ev_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lines="3"
+                        android:maxLength="500"
+                        android:hint="Description"
+                        android:textColor="#fff"
+                        android:focusableInTouchMode="true"
+                        android:paddingLeft="15dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="top"
+                        android:paddingTop="5dp"
+                        android:textColorHint="#fff"
+                        android:textCursorDrawable="@drawable/white_cursor"
+                        android:background="@drawable/yellow_edit"/>
+                    <EditText
+                        android:id="@+id/ev_hashtag"
+                        android:layout_width="match_parent"
+                        android:fontFamily="sans-serif"
+                        android:layout_height="30dp"
+                        android:hint="Hashtags"
+                        android:textColor="@color/white"
+                        android:inputType="text"
+                        android:textCursorDrawable="@drawable/white_cursor"
+                        android:layout_below="@+id/edit_description"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="15dp"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:singleLine="true"
+                        android:gravity="start|center"
+                        android:textColorHint="#fff"
+                        android:background="@drawable/edit_style_yellow"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="16dp">
+                        <TextView
+                            android:id="@+id/ev_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:hint="Location"
+                            android:inputType="text"
+                            android:layout_below="@+id/edit_hashtag"
+                            android:fontFamily="sans-serif"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="5dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:textCursorDrawable="@drawable/cursor_theme"
+                            android:singleLine="true"
+                            android:gravity="start|center"
+                            android:textColorHint="#fff"
+                            android:background="@drawable/edit_style_yellow"/>
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="16dp">
+                        <!-- android:textColor="#5F7386"-->
+                        <TextView
+                            android:id="@+id/text_life"
+                            android:fontFamily="sans-serif"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:singleLine="true"
+                            android:layout_gravity="left|center"
+                            android:text="Set duration of your post."/>
+
+                        <LinearLayout
+                            android:id="@+id/ev_valid_time"
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="right"
+                            android:gravity="center"
+                            android:background="@drawable/button_style_yellow">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:textColor="#fff"
+                                android:id="@+id/tv_evtime"
+                                android:text="Valid time"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#fff"
+                                android:src="@drawable/ic_down_arrow" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:id="@+id/fr_tag"
+                        android:layout_below="@+id/lin_one">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/private_txt"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif"
+                            android:singleLine="true"
+                            android:text="Tag people/make post private"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Tag people"
+                            android:textAllCaps="false"
+                            android:id="@+id/btn_etag"
+                            android:layout_gravity="right"
+                            android:textColor="@color/white"
+                            android:background="@drawable/button_style_yellow"/>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/re"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_marginRight="16dp"
+                        android:layout_below="@+id/edit_valid_time"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/text_price"
+                            android:fontFamily="sans-serif"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="12sp"
+                            android:layout_weight="0.2"
+                            android:textColor="#5F7386"
+                            android:text="Price"/>
+
+                        <View
+                            android:id="@+id/line_timeline"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="2dp"
+                            android:gravity="center|left"
+                            android:background="#E9E9E9"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/edit_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/re"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:gravity="start|center"
+                        android:background="@drawable/edit_style_switch_yellow">
+
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/evtabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:tabMode="fixed"
+                            app:tabBackground="@drawable/tabselector2"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                            app:tabSelectedTextColor="@android:color/white">
+
+                        </android.support.design.widget.TabLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:id="@+id/seekbar_layout"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_below="@+id/edit_switch"
+                        android:weightSum="1">
+
+                        <atpl.cc.localisys.activities.classes.RangeBar
+                            xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/serrangebar"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            custom:tickStart="1"
+                            custom:tickEnd="200"
+                            custom:tickInterval="1"
+                            android:layout_weight="0.8"
+                            custom:rangeBarColor="#b2b2b2"
+                            custom:selectorColor="#FBB045"
+                            custom:selectorSize="8dp"
+                            custom:pinColor="#FBB045"
+                            custom:pinMaxFont="12dp"
+                            custom:pinMinFont="12dp"
+                            custom:pinRadius="20dp"
+                            custom:connectingLineWeight="1dp"
+                            custom:connectingLineColor="#FBB045"
+                            custom:tickColor="#b2b2b2"
+                            custom:tickHeight="0dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center"
+                            android:id="@+id/tvValue"
+                            android:layout_marginTop="14dp"
+                            android:textSize="10sp"
+                            android:layout_gravity="center_vertical"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/re2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/seekbar_layout"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/text_timeline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="12sp"
+                            android:layout_weight="0.2"
+                            android:textColor="#5F7386"
+                            android:text="Timeline"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="2dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@+id/text_timeline"
+                            android:layout_below="@+id/text_timeline"
+                            android:background="#E9E9E9"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/edit_switch2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/re2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:gravity="start|center"
+                        android:background="@drawable/edit_style_switch_yellow">
+
+
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/evtabLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:tabMode="fixed"
+                            app:tabBackground="@drawable/tabselector2"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                            app:tabSelectedTextColor="@android:color/white">
+
+                        </android.support.design.widget.TabLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/re3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/edit_switch2"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/text_share"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="12sp"
+                            android:layout_weight="0.2"
+                            android:textColor="#5F7386"
+                            android:text="Share"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="2dp"
+                            android:layout_marginRight="16dp"
+                            android:background="#E9E9E9"></View>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rel_facebook"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/re3"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_fb"
+                            android:layout_width="60dp"
+                            android:visibility="gone"
+                            android:layout_height="60dp"
+                            android:src="@drawable/facebook_active"/>
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="20dp"
+                            android:visibility="gone"
+                            android:id="@+id/twitter_light"
+                            android:layout_toRightOf="@+id/img_fb"
+                            android:src="@drawable/twitter_deactive"/>
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/instagram"
+                            android:visibility="gone"
+                            android:layout_toRightOf="@+id/twitter_light"
+                            android:src="@drawable/insta"/>
+
+                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/btn_evsubmit"
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="25dp"
+                        android:hint="Submit"
+                        android:layout_centerInParent="true"
+                        android:textSize="18sp"
+                        android:layout_below="@+id/rel_facebook"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="25dp"
+                        android:textColorHint="#fff"
+                        android:background="@drawable/button_style_yellow"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

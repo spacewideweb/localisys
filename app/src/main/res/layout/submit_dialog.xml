@@ -1,0 +1,107 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/frameID">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_gravity="bottom"
+            android:background="#b2b2b2"/>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="We will notify relevant providera about your post."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:text="But you can invit providers to see your post."/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color_blue"
+            android:textAllCaps="false"
+            android:id="@+id/choose_provider"
+            android:text="Choose provider"
+            android:background="@drawable/edit_style_switch"/>
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lin"
+        android:background="@color/fade_blue"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/rel3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:id="@+id/cancel"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/v1"
+            android:text="Cancel"/>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="40dp"
+            android:id="@+id/v1"
+            android:background="@color/text_color_blue"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/v1"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:id="@+id/submit"
+            android:textColor="@color/text_color_blue"
+            android:text="Submit"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
