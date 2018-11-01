@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color1">#9A9C9C</color>
+    <color name="color2">#cfd8dc</color>
+    <color name="color3">#C3CACE</color>
+    <color name="blue">#2196f3</color>
+    <color name="yellow_c">#ffab40</color>
+    <color name="purple_c">#7e57c2</color>
+    <color name="text_color_blue">#3bbdfb</color>
+    <color name="bg_send">#cee5f7</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="black_light">#7f7f7f</color>
+    <color name="black_light2">#5e5e5e</color>
+    <color name="red">#f05051</color>
+    <color name="bell_blue">#6faedf</color>
+    <color name="fade_blue">#abd8ff</color>
+    <color name="fade_gray">#E9E7E7</color>
+    <color name="transparent">#00000000</color>
+    <color name="toolbar_blue">#4192ca</color>
+    <color name="view_color">#e5e5e5</color>
+    <color name="signout_text_color">#B7C6D0</color>
+    <color name="cardColor">#b0bec5</color>
+    <color name="cardInfoColor">#CDCDCD</color>
+    <color name="cardNumberHintColor">#8F9295</color>
+    <color name="viewColor">#908F9295</color>
+    <color name="transparent80">#80000000</color>
+    <color name="imageViewBorderColor">#7BB4DC</color>
+    <color name="stu_color">#2CBAFE</color>
+</resources>
