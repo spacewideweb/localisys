@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:id="@+id/lin_pro"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif"
+            android:layout_height="35dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:id="@+id/tvNOSend"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/offerneg"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@drawable/curve">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/cross_mail"
+                android:layout_marginBottom="5dp"
+                android:layout_above="@+id/tv_neg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_blue"
+                android:id="@+id/tv_neg"
+                android:layout_centerInParent="true"
+                android:text="Start negotiation first"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Enter Message..."
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp" />
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Make offer"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/whiote_border"/>
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_style"
+                    android:text="Cancel"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="Enter Message..."
+                    android:paddingLeft="10dp"
+                    android:layout_weight="0.7"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.3"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Make offer"
+                    android:id="@+id/btn_makeoffer"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/whiote_border"/>
+            </LinearLayout>-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"
+                android:text="Message"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="#aeaeae"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="6"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:hint="Your message..."
+            android:visibility="gone"
+            android:textColorHint="#fff"
+            android:fontFamily="sans-serif"
+            android:gravity="top|left"
+            android:textColor="#fff"
+            android:background="@drawable/edit_style"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lin_message"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:fontFamily="sans-serif"
+                 android:layout_height="35dp"
+                 android:textStyle="bold"
+                 android:textColor="#fff"
+                 android:background="@color/blue"
+                 android:id="@+id/tvPending"
+                 android:gravity="center"
+                 android:text="Pending"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_contract">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_gravity="center|left"
+                        android:textStyle="bold"
+                        android:text="My Proposal"/>
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center|right"
+                        android:padding="5dp"
+                        android:layout_weight="0.3"
+                        android:visibility="gone"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/edit_style_switch">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Hide"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#3bbdfb"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/up_arrow_blue"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Price"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="$16/hour"
+                            android:id="@+id/tvOfferPrice"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="left"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hourly Price"
+                            android:id="@+id/tvOfferPriceType"
+                            android:textSize="12sp"
+                            android:gravity="left"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Timeline"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 Weeks"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:id="@+id/tvOfferTimeLine"
+                            android:gravity="left" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 May 2017"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:id="@+id/tvOfferTimeDate"
+                            android:gravity="left" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:text="Service fee of localisys from every deal 10% Make sure you offer the price considering this fee."
+            android:layout_marginTop="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linAcRe"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Reject"
+                android:textColor="#fff"
+                android:id="@+id/btn_reject"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_red"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Accept"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:id="@+id/btn_accept"
+                android:background="@drawable/button_style"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Successfully Done"
+                android:textColor="#fff"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:id="@+id/btn_Successfully"
+                android:background="@drawable/button_style"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="42dp"
+            android:background="@drawable/new_blue_b"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+
+            android:id="@+id/btn_sendoffer"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:id="@+id/btn_makeoffer"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:text="Make offer"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hide_arrow1"
+                android:src="@drawable/dropdown_arrow_white"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:text="Make offer"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:drawableRight="@drawable/dropdown_arrow_white"
+            android:background="@drawable/button_style"
+            android:layout_gravity="center"/>
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Chat"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/btn_chat"
+            android:textAllCaps="false"
+            android:background="@drawable/button_style"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <!--added by me-->
+
+    <!--added by me-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linMakeOffer"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lin_btnoption"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:background="#aeaeae"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <include layout="@layout/radio_group" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/seekbar_layout"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_below="@+id/edit_switch">
+
+                <atpl.cc.localisys.activities.classes.RangeBar
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/serrangebar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    custom:tickStart="1"
+                    custom:tickEnd="200"
+                    custom:tickInterval="1"
+                    android:layout_weight="0.8"
+                    custom:rangeBarColor="#b2b2b2"
+                    custom:selectorColor="#3bbdfb"
+                    custom:selectorSize="8dp"
+                    custom:pinColor="#3bbdfb"
+                    custom:pinMaxFont="12dp"
+                    custom:pinMinFont="12dp"
+                    custom:pinRadius="20dp"
+                    custom:connectingLineWeight="1dp"
+                    custom:connectingLineColor="#3bbdfb"
+                    custom:tickColor="#b2b2b2"
+                    custom:tickHeight="0dp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:id="@+id/tvValue"
+                    android:layout_marginTop="4dp"
+                    android:textSize="10sp"
+                    android:layout_gravity="center_vertical"
+                    android:text=""/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:text="Timeline"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="#aeaeae"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+                <include layout="@layout/radio_group1" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            android:text="Send offer"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/btn_send"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_style"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

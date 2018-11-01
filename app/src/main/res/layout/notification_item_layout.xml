@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:sml="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/list_Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textAllCaps="true"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center">
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <com.tubb.smrv.SwipeHorizontalMenuLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:sml="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipe"
+        sml:sml_scroller_interpolator="@android:anim/bounce_interpolator">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:id="@id/smContentView"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/refresh_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:src="@drawable/layout_bg_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:id="@+id/linMain"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left"
+                        android:text="userName"
+                        android:textColor="#616161"
+                        android:id="@+id/tvHeading" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textSize="13sp"
+                        android:textColor="#7f7f7f"
+                        android:id="@+id/tvTxtmsg"
+                        android:maxLines="3"
+                        android:text=""
+                        android:ellipsize="end"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:id="@+id/refresh_userimg"
+                    android:src="@drawable/layout_bg_gray"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include android:id="@id/smMenuViewRight" layout="@layout/rigtht_menunew"/>
+
+    </com.tubb.smrv.SwipeHorizontalMenuLayout>
+
+
+</LinearLayout>

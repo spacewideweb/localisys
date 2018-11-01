@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fd_back">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/headertitle"
+        android:text="Select payment method"
+        android:textSize="18sp"
+        android:padding="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="5dp"
+        android:background="#aeaeae"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/subTitle"
+        android:gravity="center"
+        android:text="You added two payment methods, choose which one you want to be paid with for this post."/>
+
+
+    <Button
+        android:id="@+id/btn_bank_acct"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Bank Account"
+        android:textColor="@color/text_color_blue"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/edit_style_switch"/>
+    <FrameLayout
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:id="@+id/frm"
+        android:layout_gravity="center"
+        android:background="@drawable/button_style">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Paypal"
+            android:textSize="14sp"
+            android:id="@+id/textInblue"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/tick"
+            android:layout_gravity="right|center"
+            android:padding="2dp"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/tick_white"/>
+    </FrameLayout>
+
+    <!--<FrameLayout
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="PayPal"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_style">-->
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_color_blue"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:layout_toLeftOf="@+id/ve1"
+            android:id="@+id/tv_pmcancel"
+            android:text="Cancel"/>
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/ve1"
+            android:background="@color/text_color_blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ve1"
+            android:id="@+id/tv_pmsubmit"
+            android:textColor="@color/viewColor"
+            android:gravity="center"
+            android:text="Submit"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

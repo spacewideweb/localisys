@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/lin_done"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/tick_image_bg"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <!--<ImageView
+        android:id="@+id/im_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/done"
+        android:layout_centerHorizontal="true"/>-->
+
+    <ImageView
+        android:id="@+id/im_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_check_white" />
+
+    <!-- <com.felipecsl.gifimageview.library.GifImageView
+         android:layout_width="wrap_content"
+         android:id="@+id/im_done"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:src="@drawable/tick_image"/>
+ -->
+
+    <!-- <ImageView
+         android:id="@+id/im_cancel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/cancel"
+         android:visibility="invisible"
+         android:layout_centerHorizontal="true"
+ -->
+
+
+    <ImageView
+        android:id="@+id/im_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_clear_skip"
+        android:padding="15dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

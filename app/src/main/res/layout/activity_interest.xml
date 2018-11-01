@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frm"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/linSave">
+                <ImageView
+                    android:id="@+id/back_from_notifiction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_back_black"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textColor="#000"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your interests"
+                android:textColor="#000"
+                android:fontFamily="sans-serif"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="#000"
+                android:fontFamily="sans-serif"
+                android:layout_gravity="center|right"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:id="@+id/tvCancel"
+                android:layout_marginRight="8dp"
+                android:gravity="center"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/top_view"
+                android:background="#b2b2b2"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.1">
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/search_light_blue"/>
+            </LinearLayout>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:id="@+id/search"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:hint="Write Something.."
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:background="#d7dbdd"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/re_view"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:id="@+id/lin_hint1"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blue_hint"
+                    android:layout_centerInParent="true"
+                    android:text="Select skill or interest you're good at\nso you could answer questions by these\n topics."/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_above="@+id/center_view"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|right">
+
+            <ImageView
+                android:id="@+id/img_check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear2"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_help"/>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:id="@+id/center_view"
+            android:layout_gravity="bottom"
+            android:background="#b2b2b2"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/rv_interest"
+            android:overScrollMode="always"
+            android:layout_weight="2.2">
+        </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/linEdit"
+            android:gravity="bottom|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/edit_style_switch"
+                    android:text="Skip"
+                    android:id="@+id/skip_interest"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/start"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_style"
+                    android:text="Let's Start"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
