@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "508899190773",
+    "firebase_url": "https://localisys-au.firebaseio.com",
+    "project_id": "localisys-au",
+    "storage_bucket": "localisys-au.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508899190773:android:1876aeb32973f4da",
+        "android_client_info": {
+          "package_name": "atpl.cc.localisys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508899190773-9u1jbi3c2ed2bqnod2n0olbon5d54eeo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGQ46FOB-TVdGs8_pJJg7-i7buToUEHUc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

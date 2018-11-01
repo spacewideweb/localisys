@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/dialog_bg_feedback">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/frameID">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deal done successfully"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_gravity="bottom"
+            android:background="#b2b2b2"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_below="@+id/frameID"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.93">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/scroll"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="Responsiveness"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="16dp"
+                                android:background="#377CAB"/>
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.7"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_border_blue"/>
+
+                                    <!--<RatingBar-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--style="@style/Base.Widget.AppCompat.RatingBar.Indicator"-->
+                                    <!--android:numStars="5"-->
+                                    <!--android:rating="4"-->
+                                    <!--android:layout_marginLeft="16dp"-->
+                                    <!--android:progressTint="@color/text_color_blue"-->
+                                    <!--android:progressBackgroundTint="@color/text_color_blue"-->
+                                    <!--android:layout_height="wrap_content"/>-->
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:gravity="right"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="4.0"
+                                        android:fontFamily="sans-serif"
+                                        android:textSize="18sp"
+                                        android:gravity="center"
+                                        android:textColor="@color/text_color_blue"
+                                        android:layout_marginRight="16dp"
+
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:layout_marginLeft="16dp"
+                                android:text="Quality"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="16dp"
+                                android:background="#377CAB"/>
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.7"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_border_blue"/>
+
+                                    <!--<RatingBar-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--style="@style/Base.Widget.AppCompat.RatingBar.Indicator"-->
+                                    <!--android:numStars="5"-->
+                                    <!--android:rating="4"-->
+                                    <!--android:layout_marginLeft="16dp"-->
+                                    <!--android:progressTint="@color/text_color_blue"-->
+                                    <!--android:progressBackgroundTint="@color/text_color_blue"-->
+                                    <!--android:layout_height="wrap_content"/>-->
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:gravity="right"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="4.2"
+                                        android:textSize="18sp"
+                                        android:fontFamily="sans-serif"
+                                        android:gravity="center"
+                                        android:textColor="@color/text_color_blue"
+                                        android:layout_marginRight="16dp"
+
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="Communication"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="16dp"
+                                android:background="#377CAB"/>
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.7"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+
+                                    <!--<RatingBar-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--style="@style/Base.Widget.AppCompat.RatingBar.Indicator"-->
+                                    <!--android:numStars="5"-->
+                                    <!--android:rating="4"-->
+                                    <!--android:layout_marginLeft="16dp"-->
+                                    <!--android:progressTint="@color/text_color_blue"-->
+                                    <!--android:progressBackgroundTint="@color/text_color_blue"-->
+                                    <!--android:layout_height="wrap_content"/>-->
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:gravity="right"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="5.0"
+                                        android:fontFamily="sans-serif"
+                                        android:textSize="18sp"
+                                        android:gravity="center"
+                                        android:textColor="@color/text_color_blue"
+                                        android:layout_marginRight="16dp"
+
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="Summary"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="16dp"
+                                android:background="#377CAB"/>
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.7"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_blue"/>
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/star_border_blue"/>
+
+                                    <!--<RatingBar-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--style="@style/Base.Widget.AppCompat.RatingBar.Indicator"-->
+                                    <!--android:numStars="5"-->
+                                    <!--android:rating="4"-->
+                                    <!--android:layout_marginLeft="16dp"-->
+                                    <!--android:progressTint="@color/text_color_blue"-->
+                                    <!--android:progressBackgroundTint="@color/text_color_blue"-->
+                                    <!--android:layout_height="wrap_content"/>-->
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:gravity="right"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:layout_height="match_parent"
+                                        android:text="4.4"
+                                        android:textSize="18sp"
+                                        android:gravity="center"
+                                        android:textColor="@color/text_color_blue"
+                                        android:layout_marginRight="16dp"
+
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="16dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="5"
+                            android:padding="10dp"
+                            android:fontFamily="sans-serif"
+                            android:hint="Your review..."
+                            android:textColorHint="#fff"
+                            android:gravity="top|left"
+                            android:textColor="#fff"
+                            android:textCursorDrawable="@drawable/white_cursor"
+                            android:background="@drawable/edit_style"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:layout_gravity="bottom|right"
+                            android:padding="10dp"
+                            android:text="0/250"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/payment"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Change payment method"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:id="@+id/change_payment_method"
+                        android:textColor="@color/text_color_blue"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:id="@+id/rel3"
+            android:background="#fff">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/text_color_blue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:layout_toLeftOf="@+id/v1"
+                android:id="@+id/cancel"
+                android:text="Cancel"/>
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:id="@+id/v1"
+                android:layout_centerInParent="true"
+                android:background="@color/text_color_blue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/v1"
+                android:gravity="center"
+                android:id="@+id/end_contract"
+                android:textColor="@color/text_color_blue"
+                android:text="Successfully done"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
